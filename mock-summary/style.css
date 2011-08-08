@@ -1,0 +1,43 @@
+ol.action-list {
+    list-style: none;
+    padding: 0;
+}
+
+ol.action-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+ol.action-list>li {
+    display: -webkit-box;
+    width: 100%;
+    padding: 10px 0;
+    border: 1px solid LightGray;
+}
+
+ol.action-list>li>div.when {
+    padding: 0 10px;
+    text-align: right;
+    width: 100px;
+}
+
+ol.action-list>li>div.what {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    padding: 0 10px 0 0;
+    -webkit-box-flex: 1;
+}
+
+ol.action-list>li ul.culprits>li {
+    padding: 10px;
+    border: 1px solid Red;
+}
+
+ol.action-list>li ul.culprits>li ul.actions {
+    text-align: right;
+}
+
+ol.action-list>li ul.culprits>li li {
+    padding: 10px 0 0 0;
+    display: inline;
+}

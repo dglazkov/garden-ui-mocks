@@ -32,44 +32,105 @@ James, a web developer from Birmingham, UK.
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+ideas: who's gardening / commits per second / actions you've taken for each item (undo) / flaky tests
 <h1>Urgent</h1>
-<table border=1>
-<tbody>
-<tr>
-    <td>Just now</td>
-    <td><a href="">indexeddb/funky.html</a> is <em>crashing</em> on <a href="">WebKit Linux</a> (still haven't heard from the other bots).</td>
-    <td>Culprit: <a href="">r66669</a></td>
-    <td><button>Revert</button> or <button>File a Bug</button></td>
-</tr>
-<tr>
-    <td>10 minutes ago</td>
-    <td><a href="">http/tests/cookies.pl</a> is <em>crashing</em> on <a href="">all bots</a>.</td>
-    <td>Culprit: <a href="">r66666-r66668</a></td>
-    <td><button>Troubleshoot</button></td>
-</tr>
-<tr>
-    <td>14 minutes ago</td>
-    <td><a href="">500 tests<a/> are failing <em>pixel and text</em> expectations on <a href="">Linux and Windows bots</a>.</td>
-    <td>Culprit: <a href="">r66666</a></td>
-    <td><button>Revert</button>, <button>Rebaseline</button>, or <button>File a Bug</button></td>
-</tr>
-<tr>
-    <td>10 hours ago</td>
-    <td><a href="">9 tests<a/> in <em>svg<em> directory are failing <em>pixel</em> expectations on <a href="">Linux and Windows bots</a>.</td>
-    <td>Culprit: <a href="">r66666</a></td>
-    <td><button>Revert</button>, <button>Rebaseline</button>, or <button>File a Bug</button></td>
-</tr>
-<tr>
-    <td>2 days ago</td>
-    <td><a href="">WebKit Win</a> has been having infrastructure problems.</td>
-    <td>Since <a href="">r66604</a></td>
-    <td><a href="">Contact infrastructure team</a></td>
-</tr>
-</tbody>
-</table>
+<ol class="urgent action-list">
+    <li>
+        <div class="when">24 minutes ago</div>
+        <div class="what">
+            <div class="description">
+                <p><a href="">svg/animations/svginteger-animation-1.html</a> is failing <em>text</em> expectations on <a href="">Snow Leopard Debug</a>. Still running: <a href="">Leopard Debug</a></p>
+                <ul class="actions">
+                    <li><button>Review</button></li>
+                </ul>
+            </div>
+            <ul class="culprits">
+                <li>
+                    <div class="info">This test has been flaky since at least <a href="">92095</a></div>
+                    <ul class="actions">
+                        <li><button>Mark as Flaky</button></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="info"><a href="">92568</a>Fix a memory leak found via code inspection. mrowe@apple.com</div>
+                    <ul class="actions">
+                        <li><button>Roll out</button></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="info"><a href="">92567</a>Fix a memory leak found via code inspection. mrowe@apple.com</div>
+                    <ul class="actions">
+                        <li><button>Roll out</button></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </li>
+    <li>
+        <div class="when">10 hours ago</div>
+        <div class="what">
+            <div class="description">
+                <p><a href="">9 tests in <em>svg/</em></a> are failing <em>pixel and text</em> expectations on <a href="">various bots</a>.</p>
+                <ul class="actions">
+                    <li><button>Review</button></li>
+                </ul>
+            </div>
+            <ul class="culprits">
+                <li>
+                    <div class="info"><a href="">92545</a>REGRESSION(87526): ASSERT(!needsLayout()) followed by graphical glitches on google charts (svg loaded in iframe) zimmermann@webkit.org (Reviewer: Zoltan Herczeg)</div>
+                    <ul class="actions">
+                        <li><button>Roll out</button></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </li>
+    <li>
+        <div class="when">13 hours ago</div>
+        <div class="what">
+            <div class="description">
+                <p><a href="">fast/writing-mode/japanese-rl-text-with-broken-font.html</a> failed <em>pixel and text</em> expectations once on <a href="">Leopard Debug</a>.</p>
+                <ul class="actions">
+                    <li><button>Review</button></li>
+                </ul>
+            </div>
+            <ul class="culprits">
+                <li>
+                    <div class="info">This test has not shown flakiness.</div>
+                    <ul class="actions">
+                        <li><button>Mark as Flaky</button></li>
+                        <li><button>Ignore</button></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="info"><a href="">92544</a>[Chromium] Remove HaltablePlugin references from gyp project files Noel Gordon (Reviewer: Adam Barth)</div>
+                </li>
+                <li>
+                    <div class="info"><a href="">92543</a>Renamed fast/blockflow to fast/writing-mode. mitz@apple.com</div>
+                </li>
+                <li>
+                    <div class="info"><a href="">92542</a>Attempt to fix the build after r92538. mrowe@apple.com</div>
+                </li>
+            </ul>
+        </div>
+    </li>
+    <li>
+        <div class="when">2 days ago</div>
+        <div class="what">
+            <div class="description">
+                <p><a href="">WebKit Win (dbg)(1)</a> is having infrastructure problems.</p>
+                <ul class="actions">
+                    <li><button>Contact Owners</button></li>
+                </ul>
+            </div>
+        </div>
+    </li>
+</ol>
 <h1>Running Now</h1>
 List of commits currently on the bots
 <h1>Hygiene</h1>
+<ol class="hygiene action-list">
+</ol>
 <table border=1>
 <tbody>
 <tr>
